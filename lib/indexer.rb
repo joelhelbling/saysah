@@ -1,6 +1,6 @@
 class Indexer
-  def initialize
-    @index = -1
+  def initialize initial_index=0
+    @index = initial_index - 1
   end
 
   def next
