@@ -21,10 +21,17 @@ task :build => [:load_env, :reset, :load_index, :load_renamers] do
 end
 
 desc "Generate a Table of Contents document"
-task :generate_toc do
+task :generate_toc => [:load_env] do
   require './lib/toc_builder'
 
   TOCBuilder.new(dry_run: @dry_run).build
+end
+
+desc "Copy media to a target storage"
+task :install => [:load_env] do
+  require './lib/library_installer'
+
+  LibraryInstaller.new(dry_run: @dry_run).process
 end
 
 task :load_env do
