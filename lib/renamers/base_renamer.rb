@@ -7,6 +7,6 @@ class BaseRenamer
   end
 
   def new_name(file, params)
-    file.name
+    "#{target.path}/#{indexer.next}_#{file.name}"
   end
 end

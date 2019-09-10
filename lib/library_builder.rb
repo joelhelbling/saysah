@@ -7,7 +7,8 @@ require 'pry'
 class LibraryBuilder
   attr_reader :source, :target, :indexer
 
-  def initialize
+  def initialize(opts)
+    @dry_run = opts[:dry_run]
     @target = TargetLibrary.new
     @source = SourceLibrary.new
     @indexer = Indexer.new target.last
@@ -21,6 +22,10 @@ class LibraryBuilder
 
   private
 
+  def dry_run?
+    @dry_run
+  end
+
   def process_directory(params)
     renamer = eval(params.renamer).new(target, indexer)
     source = SourceLibrary.new params.path
@@ -31,7 +36,7 @@ class LibraryBuilder
 
   def process_file(file, params, renamer)
     target_filename = renamer.new_name(file, params)
-    `ln -s "#{file}" "#{target_filename}"`
-    puts "linked \"#{file}\" to \"#{target_filename}\""
+    `ln -s "#{file}" "#{target_filename}"` unless dry_run?
+    puts "\"#{file}\" -> \"#{target_filename}\""
   end
 end
