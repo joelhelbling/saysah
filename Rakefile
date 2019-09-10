@@ -20,6 +20,13 @@ task :build => [:load_env, :reset, :load_index, :load_renamers] do
   LibraryBuilder.new(dry_run: @dry_run).process @index
 end
 
+desc "Generate a Table of Contents document"
+task :generate_toc do
+  require './lib/toc_builder'
+
+  TOCBuilder.new(dry_run: @dry_run).build
+end
+
 task :load_env do
   require 'dotenv/load'
   @dry_run = ENV['DRY_RUN']
