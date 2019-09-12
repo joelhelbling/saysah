@@ -1,5 +1,4 @@
 ---
 - name: example_series
   path: /path/to/series
-  removes: UNWANTED_PART_OF_EACH_FILENAME
   renamer: SeriesRenamer
