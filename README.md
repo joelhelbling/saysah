@@ -1,12 +1,12 @@
 # SaySah
 
-_A Media library builder for the Techsun Q3 Pocket Radio Recorder/Digital Audio Player._
+_A Media library builder for the [Tecsun Q3 Pocket Radio Recorder/Digital Audio Player][tecsun_q3]._
 
 ## Background
 
 In Sierra Leone I met a blind pastor named Sah.  I was impressed by his diligence in understanding well the matters he spoke about to his congregation, and I wanted to put tools in his hands to help him.
 
-I went back to the States for a year, and during that time was looking for an digital audio player, particularly one which would be condusive for use by someone with a seeing disability.  Most MP3 players rely heavily on interaction with a touch screen, but the Techsun Q3 features a numeric pad for selecting tracks, and while the screen provides useful information, for the most part the device can be operated without looking at it, particularly if one is familiar with the numbering of all the media files in storage on the device.
+I went back to the States for a year, and during that time was looking for an digital audio player, particularly one which would be condusive for use by someone with a seeing disability.  Most MP3 players rely heavily on interaction with a touch screen, but the Tecsun Q3 features a numeric pad for selecting tracks, and while the screen provides useful information, for the most part the device can be operated without looking at it, particularly if one is familiar with the numbering of all the media files in storage on the device.
 
 The next problem was that the Q3 arranges its MP3 files in simple alphabetical order.  That might be fine for small collections of media, but the Q3 does not provide an interface for accessing folders, and so there is the potential that the media will not end up in the order we wish.  For instance, if we've included the gospel of Matthew in both the NIV and ESV Bibles, we may find that the first track (`0001`) may be `Matthew_01_ESV.mp3` immediately followed by `Matthew_01_NIV.mp3` (and not, as we might have expected, `Matthew_02_ESV.mp3`).
 
@@ -82,5 +82,6 @@ This software is available as open source under the terms of the [MIT License][m
 
 This software is dedicated to my Sierra Leonean pastor, Pastor Sah.
 
+[tecsun_q3]: http://tecsunusa.com/tecsun-q3-mini-size-mp3-player-fm-radio-and-voice-radio-recorder-orange-27.html
 [code_of_conduct]: https://github.com/joelhelbling/saysah/blob/master/CODE_OF_CONDUCT.md
 [mit]: https://opensource.org/licenses/MIT
